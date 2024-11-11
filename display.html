@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Treasure - Display</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+        .display-content {
+            max-width: 900px; /* Max width for the display content */
+            margin: 20px auto; /* Center the content */
+            padding: 20px; /* Inner padding */
+            background-color: #ffffff; /* White background for the section */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .display-content h2 {
+            text-align: center; /* Center the heading */
+            color: #2c3e50; /* Dark text color */
+            margin-bottom: 20px; /* Space below the heading */
+            font-size: 2em; /* Larger font size for the heading */
+        }
+
+        .display-content p {
+            line-height: 1.8; /* Improve readability with line height */
+            color: #34495e; /* Darker text color */
+            margin-bottom: 20px; /* Space between paragraphs */
+            text-align: center; /* Center text for better aesthetics */
+        }
+
+        .gallery {
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive columns */
+            gap: 15px; /* Space between images */
+        }
+
+        .gallery-item {
+            background: #ffffff; /* White background for each item */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for items */
+            padding: 10px; /* Inner padding */
+            text-align: center; /* Center text */
+            transition: transform 0.3s; /* Transition for hover effect */
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .gallery img {
+            width: 100%; /* Make images responsive */
+            border-radius: 10px; /* Rounded corners for images */
+        }
+
+        .item-name {
+            font-weight: bold; /* Bold font for item name */
+            margin-top: 10px; /* Space above item name */
+            color: #2c3e50; /* Dark text color */
+        }
+
+        .item-price {
+            color: #e74c3c; /* Price color */
+            margin-top: 5px; /* Space above price */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Culture Treasure</h1>
+        <button class="open-btn" onclick="openNav()">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="display.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="display.html" class="active">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </div>
+
+    <main>
+        <section class="display-content">
+            <h2>Gallery</h2>
+            <p>Explore our collection of culture artifacts and learn about their significance.</p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/files/F43SkeletonNo-2Multicolor_cb26e6f0-5aa0-442a-9997-a8b9a05c413b_360x.png?v=1712147950" alt="Cultural Treasure 1">
+                    <div class="item-name">Ladies Beaded Skeleton</div>
+                    <div class="item-price">R 600</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/PhotoRoom-20220728_172416_edit_625416236271750_360x.png?v=1659170680" alt="Cultural Treasure 2">
+                    <div class="item-name">Ndebele Banadana</div>
+                    <div class="item-price">R 200</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/IMG_20220728_173031_360x.png?v=1659170667" alt="Cultural Treasure 3">
+                    <div class="item-name">Ndebele Banadana</div>
+                    <div class="item-price">R 200</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/files/RoundTieNeclaceBlack_White_360x.jpg?v=1729415258" alt="Cultural Treasure 4">
+                    <div class="item-name">African Round Tie Necklace Black and White  </div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/F120_360x.png?v=1692353799" alt="Cultural Treasure 4">
+                    <div class="item-name">Cultural Treasure 4</div>
+                    <div class="item-price">R 200</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/PhotoRoom-20220223_191549_edit_44445844229154_360x.png?v=1691932606" alt="Cultural Treasure 4">
+                    <div class="item-name">Cultural Treasure 4</div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R4Black_WhiteNecklace_c1baf138-56f9-479e-b50a-998a433cc98b_360x.png?v=1666811053" alt="Cultural Treasure 4">
+                    <div class="item-name">Black and White Necklace</div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R1-3in1SolidChoker_360x.png?v=1655315687" alt="Cultural Treasure 4">
+                    <div class="item-name">3in1 Solid Choker</div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/114-NdebeleRingNecklace_360x.jpg?v=1607708774" alt="Cultural Treasure 4">
+                    <div class="item-name">Ndebele Necklace</div>
+                    <div class="item-price">R 1400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/iNcemaMats_50227080-242d-44b9-b511-8825f35d4f42_360x.jpg?v=1625064970" alt="Cultural Treasure 4">
+                    <div class="item-name">Grass Mats iNcema Small</div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/iNcemaMats_50227080-242d-44b9-b511-8825f35d4f42_360x.jpg?v=1625064970" alt="Cultural Treasure 4">
+                    <div class="item-name">Grass Mats iNcema medium</div>
+                    <div class="item-price">R 600</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/iNcemaMats_50227080-242d-44b9-b511-8825f35d4f42_360x.jpg?v=1625064970" alt="Cultural Treasure 4">
+                    <div class="item-name">Grass Mats iNcema large</div>
+                    <div class="item-price">R 900</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/PhotoRoom-20220728_110009_edit_615721482380521_360x.png?v=1665575569" alt="Cultural Treasure 4">
+                    <div class="item-name">Xhosa Necklace Extra Large</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R3_360x.png?v=1666810788" alt="Cultural Treasure 4">
+                    <div class="item-name">African beaded Necklace</div>
+                    <div class="item-price">R 300</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/X5XhosaArmBandsBlack_WhitePair_360x.png?v=1649250307" alt="Cultural Treasure 4">
+                    <div class="item-name">Xhosa Arm Bands (Pair)</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img1.jpg" alt="Cultural Treasure 4">
+                    <div class="item-name">Ndebele Necklace</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R12LARGE_360x.png?v=1650371028" alt="Cultural Treasure 4">
+                    <div class="item-name">SA Xhosa Necklace Large</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R13_LRG_2_360x.png?v=1650371028" alt="Cultural Treasure 4">
+                    <div class="item-name">SA Xhosa Necklace Large</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R82_SA_Necklace_Large_Light_Blue_White_360x.png?v=1650371024" alt="Cultural Treasure 4">
+                    <div class="item-name">SA Xhosa Necklace Large</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                <img src="img4.jpg" alt="Cultural Treasure 4">
+                <div class="item-name">pursue</div>
+                <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img3.jpg" alt="Cultural Treasure 4">
+                    <div class="item-name">Ndebele flower</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img5.jpg" alt="Cultural Treasure 4">
+                    <div class="item-name">Ndebele flower</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img8.jpg" alt="Cultural Treasure 4">
+                    <div class="item-name">Combo</div>
+                    <div class="item-price">R 400</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="img2.jpg" alt="Beautiful handmade combo set" class="gallery-image">
+                    <div class="item-name">Handmade Combo Set</div>
+                    <div class="item-price">R 400</div>
+                     <!-- 
+                    <button class="order-button" onclick="location.href='order.html'">Order Now</button>
+                     -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Culture Treasure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.left = "0"; // Slide in the sidebar
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.left = "-250px"; // Slide out the sidebar
+        }
+    </script>
+</body>
+</html>
