@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Culture Treasure - Home</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Culture Treasure</h1>
+            <button class="open-btn" onclick="openNav()">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="display.html">Gallery</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="display.html">Gallery  </a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+
+        <main>
+            <section class="hero">
+                
+                <h2>Discover the World's Culture Heritage</h2>
+                <p>Join us in exploring and preserving the rich tapestry of human culture.</p>
+                <a href="display.html" class="cta-button">Explore Treasures</a>
+            </section>
+
+            <section class="featured-treasures">
+                <h2>Featured Treasures</h2>
+                <div class="gallery">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/files/F43SkeletonNo-2Multicolor_cb26e6f0-5aa0-442a-9997-a8b9a05c413b_360x.png?v=1712147950" alt="Cultural Treasure 1">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/F124BEADEDAPRON_b_360x.png?v=1659435937" alt="Cultural Treasure 2">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/R1-3in1SolidChoker_360x.png?v=1655315687" alt="Cultural Treasure 3">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/IMG_20220728_173031_360x.png?v=1659170667" alt="Cultural Treasure 4">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/PhotoRoom-20220728_172416_edit_625416236271750_360x.png?v=1659170680" alt="Cultural Treasure 4">
+                    <img src="https://africantraditionalwear.co.za/cdn/shop/products/114-NdebeleRingNecklace_360x.jpg?v=1607708774" alt="Cultural Treasure 5">
+                </div>
+            </section>     
+
+            <section class="about-preview">
+                <h2>About Us</h2>
+                <p>At Culture Treasure, we are dedicated to showcasing and preserving cultural artifacts from around the globe. Our mission is to educate and inspire through the beauty of diverse cultures.</p>
+                <a href="about.html" class="cta-button">Learn More</a>
+            </section> 
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Culture Treasure. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.left = "0"; // Slide in the sidebar
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.left = "-250px"; // Slide out the sidebar
+            }
+        </script>
+    </body>
+    </html>

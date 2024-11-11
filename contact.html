@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culture Treasure - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Culture Treasure</h1>
+        <button class="open-btn" onclick="openNav()">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="display.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="display.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+    </div>
+
+    <main>
+        <section class="contact-content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+            <form action="https://getform.io/f/ayvvkdvb" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-label="Your Name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required aria-label="Your Email">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required aria-label="Your Message"></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+
+            <script>
+                // Optional: Handle the form submission event
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    // Show a success message (optional)
+                    alert('Your message has been sent!');
+            
+                    // Clear the form fields
+                    this.reset(); // Reset all form fields to their initial values
+                });
+            </script>
+
+            
+
+            <div class="contact-info">
+                <h3>Our Contact Information</h3>
+                <p><strong>Email:</strong> <a href="mailto:culturetreasuresa@gmail.com">culturetreasuresa@gmail.com</a></p>
+                <p><strong>Phone:</strong> 072 720 8958</p>
+                <p><strong>Address :</strong> Mamelodi west</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Culture Treasure. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.left = "0"; // Slide in the sidebar
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.left = "-250px"; // Slide out the sidebar
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .order-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .order-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .order-price {
+            font-size: 1.5em;
+            color: #e74c3c;
+            margin: 10px 0;
+        }
+        .back-button, .submit-button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .back-button:hover, .submit-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="order-container">
+    <h1>Order Details</h1>
+    <img id="itemImage" class="order-image" src="" alt="Item Image">
+    <div class="order-price" id="itemPrice"></div>
+
+    <form id="payfast-form" action="https://sandbox.payfast.co.za/eng/process" method="POST">
+        <input type="hidden" name="merchant_id" value="25915479"> <!-- Replace with your Merchant ID -->
+        <input type="hidden" name="merchant_key" value="qlz4abqanxiae"> <!-- Replace with your Merchant Key -->
+        <input type="hidden" name="return_url" value="http://yourwebsite.com/success"> <!-- Replace with your return URL -->
+        <input type="hidden" name="cancel_url" value="http://yourwebsite.com/cancel"> <!-- Replace with your cancel URL -->
+        <input type="hidden" name="notify_url" value="http://yourwebsite.com/notify"> <!-- Replace with your notify URL -->
+        <input type="hidden" name="item_name" id="item-name" value="">
+        <input type="hidden" name="amount" id="item-amount" value="">
+        <input type="hidden" name="item_description" value="Description of the item">
+        <button type="submit" class="submit-button">Pay Now</button>
+    </form>
+
+    <button class="back-button" onclick="goBack()">Back to Gallery</button>
+</div>
+
+<script>
+    // Function to retrieve item details from the URL parameters
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            image: params.get('image'),
+            price: params.get('price')
+        };
+    }
+
+    // Function to display the item details
+    function displayItemDetails() {
+        const itemDetails = getQueryParams();
+        document.getElementById('itemImage').src = itemDetails.image || 'default.jpg'; // Provide a default image if none
+        document.getElementById('itemPrice').innerText = itemDetails.price || 'Price not available';
+
+        // Set the hidden fields for PayFast
+        document.getElementById('item-name').value = itemDetails.image ? itemDetails.image : 'Default Item Name';
+        document.getElementById('item-amount').value = itemDetails.price ? (parseFloat(itemDetails.price.replace(/[^0-9.-]+/g,"")) * 100).toFixed(0) : '0'; // Convert to cents
+    }
+
+    // Function to go back to the previous page
+    function goBack() {
+        window.history.back();
+    }
+
+    // Call the function to display item details when the page loads
+    window.onload = displayItemDetails;
+</script>
+
+</body>
+</html>
